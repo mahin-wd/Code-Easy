@@ -11,12 +11,13 @@ const LeftNav = () => {
         .then(res => res.json())
         .then(data => setCourses(data));
     },[])
+
     return (
         <div>
             {
-                courses.map(course => <Link to={`/courses/${courses.id}`}>
-                <p key={course.id}>{course.name}</p>
-                </Link>)
+                courses.map(course => <p key={course.id}>
+                    <Link to={`courses/${course.id}`}>{course.name}</Link>
+                </p>)
             }
         </div>
     );
