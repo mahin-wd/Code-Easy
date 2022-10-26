@@ -8,9 +8,9 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="" variant="">
+        <Navbar className='mx-auto' collapseOnSelect expand="lg" bg="" variant="">
         <Container>
-          <Navbar.Brand href="#home" className='fs-3 fw-bold'>Code Easy</Navbar.Brand>
+          <Navbar.Brand className='fs-3 fw-bold'>Code Easy</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
