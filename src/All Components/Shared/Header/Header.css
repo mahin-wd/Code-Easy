@@ -1,0 +1,10 @@
+.nav-links a{
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-weight: 600;
+}
+
+.nav-brand a{
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+}
