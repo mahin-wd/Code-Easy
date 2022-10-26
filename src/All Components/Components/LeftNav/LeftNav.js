@@ -13,7 +13,7 @@ const LeftNav = () => {
     },[])
 
     return (
-        <div>
+        <div className='text-start'>
             {
                 courses.map(course => <p key={course.id}>
                     <Link to={`courses/${course.id}`}>{course.name}</Link>
