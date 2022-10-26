@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Courses = () => {
     const selectedCourse = useLoaderData();
@@ -11,7 +11,7 @@ const Courses = () => {
                 <h2 className="card-title">{title}</h2>
                 <p>{detail}</p>
                 <div className="card-actions justify-end">
-                <button className="btn btn-primary">Purchase</button>
+                <Link to="/payment"><button className="btn btn-primary">Purchase</button></Link>
                 </div>
             </div>
         </div>

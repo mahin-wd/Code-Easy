@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './LeftNav.css'
 
 const LeftNav = () => {
     const [courses, setCourses] = useState([]);
@@ -13,9 +14,9 @@ const LeftNav = () => {
     },[])
 
     return (
-        <div className='text-start'>
+        <div className='text-start lg:mt-20 ms-20 lg:fixed'>
             {
-                courses.map(course => <p key={course.id}>
+                courses.map(course => <p className='side-bar' key={course.id}>
                     <Link to={`courses/${course.id}`}>{course.name}</Link>
                 </p>)
             }

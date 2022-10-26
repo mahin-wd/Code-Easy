@@ -1,0 +1,10 @@
+.side-bar a{
+    text-decoration: none;
+    color: rgb(77, 77, 77);
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+
+.side-bar a:hover{
+    letter-spacing: 2px;
+}

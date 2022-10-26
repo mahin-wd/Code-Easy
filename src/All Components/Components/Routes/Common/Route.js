@@ -7,6 +7,7 @@ import SignUp from '../../../Shared/SignUp/SignUp';
 import Blog from '../../Blog/Blog';
 import FAQ from '../../FAQ/FAQ';
 import Courses from '../../Courses/Courses';
+import Payment from '../../Payment/Payment';
 
 export const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
                 path: '/courses/:id',
                 loader: ({params}) => fetch(`http://localhost:4000/courses/${params.id}`),
                 element: <Courses></Courses>
+            },
+            {
+                path: '/payment',
+                element: <Payment></Payment>
             }
         ]
             
