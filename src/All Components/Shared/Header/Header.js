@@ -21,7 +21,7 @@ const Header = () => {
           </Nav>
           <Nav>
             <Nav>
-              Dank memes
+              <Link to="/login">Login</Link>
             </Nav>
           </Nav>
         </Navbar.Collapse>

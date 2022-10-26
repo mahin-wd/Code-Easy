@@ -1,10 +1,28 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <div>
-            login page
-        </div>
+        <Form className='w-50 m-auto text-start'>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control name="email" type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+                </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control name="password" type="password" placeholder="Password" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+                Log In
+            </Button>
+            <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+        </Form>
     );
 };
 
