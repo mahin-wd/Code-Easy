@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                loader: () => fetch('http://localhost:4000/courses'),
+                loader: () => fetch('https://code-easy-server.vercel.app/courses'),
                 element: <Home></Home>
             },
             {
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/courses/:id',
-                loader: ({params}) => fetch(`http://localhost:4000/courses/${params.id}`),
+                loader: ({params}) => fetch(`https://code-easy-server.vercel.app/courses/${params.id}`),
                 element: <Courses></Courses>
             },
             {
