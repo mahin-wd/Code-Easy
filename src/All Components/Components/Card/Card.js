@@ -1,4 +1,6 @@
-import React from 'react';  
+import React from 'react';
+
+
 const Card = ({course}) => {
     const {title, img, detail, ratings, view, instructor} = course;
     return (
