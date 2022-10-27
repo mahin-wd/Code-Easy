@@ -9,6 +9,7 @@ import { AuthContext } from '../../Components/Context/AuthProvider';
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { FaUser } from 'react-icons/fa';
+import logo from '../../../logo/logo.png'
 import './Header.css'
 
 const Header = () => {
@@ -25,7 +26,10 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="" variant="">
       <Container>
         <Navbar.Brand className='fw-bold nav-brand'>
-        <Link to="/">Code Easy</Link>
+        <Link className='d-flex align-items-center' to="/">
+          <img className='h-20' src={logo} alt="" />
+          <p className='mt-3'>Code Easy</p>
+        </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -59,7 +63,13 @@ const Header = () => {
     </OverlayTrigger>
             </Nav>
             {
-              user?.uid ? <button onClick={signOut}><p>Log Out</p></button> : <p><Link to="/login">Login</Link></p>
+              user?.uid ? 
+              <button onClick={signOut}><p>Log Out</p></button> 
+              : 
+              <>
+              <p className='me-3'><Link to="/login">Login</Link></p>
+              <p><Link to="/signup">Sign Up</Link></p>
+              </>
             }
           </Nav>
         </Navbar.Collapse>

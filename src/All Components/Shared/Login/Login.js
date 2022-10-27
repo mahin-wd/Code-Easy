@@ -9,7 +9,7 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const {loginWithEmailAndPass, loginWithGoogle, loginWithGithub} = useContext(AuthContext);
+    const {loginWithEmailAndPass, loginWithGoogle, loginWithGithub, setLoading} = useContext(AuthContext);
     const navigation = useNavigate();
     const location = useLocation();
 
@@ -55,6 +55,9 @@ const Login = () => {
         .catch (error => {
             console.error(error);
         setError(error.message);
+        })
+        .finallu(() => {
+            setLoading(false);
         })
     }
     
