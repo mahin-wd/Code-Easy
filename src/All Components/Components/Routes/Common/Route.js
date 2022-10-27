@@ -9,6 +9,7 @@ import FAQ from '../../FAQ/FAQ';
 import Courses from '../../Courses/Courses';
 import Payment from '../../Payment/Payment';
 import Private from '../Private/Private';
+import PageNotFound from '../../404 page/PageNotFound';
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
             {
                 path: '/payment',
                 element: <Private><Payment></Payment></Private>
+            },
+            {
+                path: '*',
+                element: <PageNotFound></PageNotFound>
             }
         ]
             

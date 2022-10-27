@@ -5,6 +5,8 @@ import { FaStar } from 'react-icons/fa';
 const Courses = () => {
     const selectedCourse = useLoaderData();
     const {title, img, description, fee, ratings} = selectedCourse;
+
+
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure><img className='rounded' src={img} alt="Album"/></figure>
