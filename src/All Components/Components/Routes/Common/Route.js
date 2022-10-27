@@ -8,6 +8,7 @@ import Blog from '../../Blog/Blog';
 import FAQ from '../../FAQ/FAQ';
 import Courses from '../../Courses/Courses';
 import Payment from '../../Payment/Payment';
+import Private from '../Private/Private';
 
 export const router = createBrowserRouter([
     {
@@ -42,7 +43,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/payment',
-                element: <Payment></Payment>
+                element: <Private><Payment></Payment></Private>
             }
         ]
             

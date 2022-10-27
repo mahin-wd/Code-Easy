@@ -70,7 +70,7 @@ const Login = () => {
             </div>
 
             <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
-            <p>{error}</p>
+            <p className='text-danger'>{error}</p>
         </Form>
     );
 };
