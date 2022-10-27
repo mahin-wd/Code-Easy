@@ -9,6 +9,8 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
+
+        {/* adding side navigation */}
             <Container>
                 <Row>
                     <Col lg='2'>

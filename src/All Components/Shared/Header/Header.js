@@ -48,7 +48,7 @@ const Header = () => {
         >
           {
             user?.photoURL ? <Image
-            className='w-25 '
+            className='w-10 '
             ref={ref}
             roundedCircle
             src={user.photoURL}

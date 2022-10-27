@@ -12,18 +12,27 @@ const auth = getAuth(app);
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState([]);
 
+    // * google login
     const loginWithGoogle = (provider) => {
         return signInWithPopup(auth, provider);
     };
 
+    // * github login
+    const loginWithGithub = (provider) => {
+        return signInWithPopup(auth, provider);
+    };
+
+    // * email sign up
     const signUpHandler = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    // * log in
     const loginWithEmailAndPass = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password);
     };
 
+    // * sign out
     const logOut = () => {
         return signOut(auth);
     }
@@ -37,7 +46,7 @@ const AuthProvider = ({children}) => {
         }
     }, [])
 
-    const authInfo = {user, loginWithGoogle, loginWithEmailAndPass, signUpHandler, logOut};
+    const authInfo = {user, loginWithGoogle, loginWithEmailAndPass, signUpHandler, loginWithGithub, logOut};
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

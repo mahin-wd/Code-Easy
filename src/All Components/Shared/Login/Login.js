@@ -5,11 +5,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../Components/Context/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const {loginWithEmailAndPass, loginWithGoogle} = useContext(AuthContext);
+    const {loginWithEmailAndPass, loginWithGoogle, loginWithGithub} = useContext(AuthContext);
     const navigation = useNavigate();
     const location = useLocation();
 
@@ -17,7 +17,8 @@ const Login = () => {
 
     const [error, setError] = useState('');
 
-    const provider = new GoogleAuthProvider;
+    const provider = new GoogleAuthProvider();
+    const newProvider = new GithubAuthProvider();
 
     const googleLogin = () => {
         loginWithGoogle(provider)
@@ -27,6 +28,17 @@ const Login = () => {
             navigation('/')
         })
         .catch(e => console.error(e));
+    }
+
+    const githubLogin = () => {
+        loginWithGithub(newProvider)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            navigation('/')
+        })
+        .catch(e => console.error(e));
+
     }
 
     const handleLogin = event => {
@@ -68,7 +80,7 @@ const Login = () => {
             <div>
                 <Link className='d-flex justify-content-center m-3 text-dark    '>
                 <FaGoogle onClick={googleLogin} className='me-3'></FaGoogle>
-                <FaGithub></FaGithub>
+                <FaGithub onClick={githubLogin}></FaGithub>
                 </Link>
             </div>
 
