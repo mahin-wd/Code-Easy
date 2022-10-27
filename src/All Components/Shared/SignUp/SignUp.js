@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Components/Context/AuthProvider';
 
 const SignUp = () => {
-    const {signUpHandler, updateUserProfile} = useContext(AuthContext);
+    const {signUpHandler} = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
@@ -14,15 +14,13 @@ const SignUp = () => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
-        const name = form.name.value;
-        const photoURL = form.photoURL.value;
         const password = form.password.value;
 
         signUpHandler(email, password)
         .then(result => {
             const user = result.user;
+            console.log(user);
             form.reset();
-            updateUsersProfile(name, photoURL);
             navigate('/login');
         })
         .catch(error => {
@@ -30,15 +28,6 @@ const SignUp = () => {
             setError(error.message);
         });
 
-        const updateUsersProfile = (name, photoURL) => {
-            const profile = {
-                displayName: name,
-                photoURL: photoURL
-            }
-            updateUserProfile(profile)
-            .then(() => {})
-            .catch(error => console.error(error));
-        }
     }
     return (
         <Form className='w-75 m-auto' onSubmit={handleSignUp}>

@@ -1,0 +1,33 @@
+[debug] [2022-10-27T10:00:58.616Z] ----------------------------------------------------------------------
+[debug] [2022-10-27T10:00:58.617Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2022-10-27T10:00:58.618Z] CLI Version:   11.15.0
+[debug] [2022-10-27T10:00:58.618Z] Platform:      linux
+[debug] [2022-10-27T10:00:58.618Z] Node Version:  v18.11.0
+[debug] [2022-10-27T10:00:58.618Z] Time:          Thu Oct 27 2022 16:00:58 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-27T10:00:58.618Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-27T10:00:58.623Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-27T10:00:58.623Z] > authorizing via signed-in user (mahinmayiz420@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/mahin/Programming1/react/assignment-10-file/assignment-10-client
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 

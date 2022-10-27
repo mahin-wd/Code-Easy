@@ -50,6 +50,7 @@ const Login = () => {
         loginWithEmailAndPass(email, password)
         .then(result => {
             const user = result.user;
+            console.log(user);
             navigation(from, {replace: true})
         })
         .catch (error => {
